@@ -12,16 +12,16 @@ name: Firebase
 on:
   push:
     branches:
-    - master
+    - main
 jobs:
   main:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@master
+      uses: actions/checkout@main
     - name: Deploy to Firebase
-      uses: BIGG-Kaymo/deploy-firebase-functions@v1.0.1
+      uses: LikeAnOwner/deploy-firebase-functions@v1.0.2
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 ```
